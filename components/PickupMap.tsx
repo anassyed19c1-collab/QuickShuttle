@@ -38,7 +38,13 @@ export default function PickupMap({ onPickupSelect }: PickupMapProps) {
   const [position, setPosition] = useState<[number, number] | null>(null);
 
   return (
-    <div className="rounded-lg overflow-hidden border border-gray-300 h-80 w-full">
+    <div
+      className={`h-80 w-full overflow-hidden rounded-2xl border-2 shadow-sm transition-colors duration-300 ${
+        position
+          ? "border-brand-400 shadow-brand-500/10"
+          : "border-slate-200"
+      }`}
+    >
       <MapContainer
         center={CAMPUS_CENTER}
         zoom={16}

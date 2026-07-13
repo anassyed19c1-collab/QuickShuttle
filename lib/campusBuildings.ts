@@ -5,16 +5,16 @@ export interface CampusBuilding {
   lng: number;
 }
 
-// IBA Karachi — real coordinates (via Google Places)
+// University of Karachi (KU) — real coordinates (via Google Places)
 export const CAMPUS_BUILDINGS: CampusBuilding[] = [
-  { id: "main-campus", name: "Main Campus (University Enclave)", lat: 24.9407408, lng: 67.1155760 },
-  { id: "city-campus", name: "City Campus (Garden/Saddar)", lat: 24.8669427, lng: 67.0256899 },
-  { id: "boys-hostel", name: "IBA Boys Hostel", lat: 24.9363897, lng: 67.1105735 },
-  { id: "girls-hostel", name: "IBA New Girls Hostel", lat: 24.9455672, lng: 67.1264895 },
-  { id: "library", name: "Mian Abdullah Library", lat: 24.9408978, lng: 67.1151033 },
-  { id: "student-centre", name: "Alumni Students' Centre (Gym/Sports)", lat: 24.9406339, lng: 67.1130414 },
-  { id: "city-campus-cafe", name: "Aman Tower Cafe (City Campus)", lat: 24.8670826, lng: 67.0255920 },
+  { id: "main-building", name: "Main Building", lat: 24.9389017, lng: 67.1237318 },
+  { id: "mahmud-husain-library", name: "Dr. Mahmud Husain Library", lat: 24.9394623, lng: 67.1208563 },
+  { id: "girls-hostel", name: "KU Girls Hostel", lat: 24.9356542, lng: 67.1234729 },
+  { id: "pg-canteen", name: "PG Canteen", lat: 24.9396761, lng: 67.1198702 },
+  { id: "staff-gate", name: "Staff Gate (Main Entrance)", lat: 24.9340103, lng: 67.1293345 },
+  { id: "sociology-dept", name: "Department of Sociology", lat: 24.9378826, lng: 67.1221740 },
+  { id: "hijri-gate", name: "Gulzar-e-Hijri Gate", lat: 24.9484820, lng: 67.1126153 },
 ];
 
-// Default map center — IBA Main Campus (University Enclave)
-export const CAMPUS_CENTER: [number, number] = [24.9407408, 67.1155760];
+// Default map center — University of Karachi (Main Building)
+export const CAMPUS_CENTER: [number, number] = [24.9389017, 67.1237318];
