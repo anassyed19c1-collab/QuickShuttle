@@ -65,3 +65,51 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans);
 }
+
+/*
+ * QuickShuttle split-screen auth layout.
+ * Targets Amplify UI's documented `data-amplify-*` structural attributes
+ * (https://ui.docs.amplify.aws/react/theming#global-styling) rather than
+ * internal class names, so this stays stable across Amplify UI upgrades.
+ */
+[data-amplify-authenticator] {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background: linear-gradient(180deg, var(--color-brand-50) 0%, var(--background) 55%);
+}
+
+[data-amplify-container] {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: var(--amplify-components-authenticator-container-width-max, 60rem);
+  overflow: hidden;
+  border-radius: var(--amplify-radii-large);
+  box-shadow: 0 20px 60px -12px rgba(15, 23, 42, 0.18);
+}
+
+[data-amplify-container] [data-amplify-router] {
+  flex: 1 1 0%;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  padding: clamp(1.75rem, 4vw, 3rem);
+}
+
+@media (max-width: 860px) {
+  [data-amplify-authenticator] {
+    padding: 0;
+  }
+
+  [data-amplify-container] {
+    flex-direction: column;
+    border-radius: 0;
+    min-height: 100vh;
+    box-shadow: none;
+  }
+}

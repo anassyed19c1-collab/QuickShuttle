@@ -21,6 +21,7 @@ export const amplifyTheme: Theme = {
     components: {
       button: {
         borderRadius: "{radii.medium}",
+        transitionDuration: "150ms",
         primary: {
           backgroundColor: "{colors.brand.primary.80}",
           _hover: { backgroundColor: "{colors.brand.primary.90}" },
@@ -33,12 +34,22 @@ export const amplifyTheme: Theme = {
       },
       fieldcontrol: {
         borderRadius: "{radii.medium}",
+        transitionDuration: "150ms",
         _focus: {
           borderColor: "{colors.brand.primary.60}",
+          boxShadow: "0 0 0 4px rgba(99, 102, 241, 0.15)",
         },
       },
       tabs: {
+        borderColor: "transparent",
         item: {
+          fontWeight: "600",
+          transitionDuration: "150ms",
+          borderColor: "transparent",
+          color: "{colors.font.tertiary}",
+          _hover: {
+            color: "{colors.brand.primary.80}",
+          },
           _active: {
             color: "{colors.brand.primary.80}",
             borderColor: "{colors.brand.primary.80}",
@@ -46,15 +57,28 @@ export const amplifyTheme: Theme = {
         },
       },
       authenticator: {
+        container: {
+          widthMax: "60rem",
+        },
         router: {
-          boxShadow: "0 8px 30px rgba(15, 23, 42, 0.08)",
+          borderWidth: "0",
+          boxShadow: "none",
+          backgroundColor: "transparent",
+        },
+      },
+      alert: {
+        paddingBlock: "0.875rem",
+        paddingInline: "1rem",
+        error: {
+          backgroundColor: "#fef2f2",
+          color: "#b91c1c",
         },
       },
     },
     radii: {
       small: { value: "8px" },
       medium: { value: "10px" },
-      large: { value: "16px" },
+      large: { value: "20px" },
     },
     fonts: {
       default: {

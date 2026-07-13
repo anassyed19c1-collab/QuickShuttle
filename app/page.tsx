@@ -1,9 +1,13 @@
 "use client";
 
 import { Authenticator } from "@aws-amplify/ui-react";
-import "@aws-amplify/ui-react/styles.css";
 import { Bus, LogOut } from "lucide-react";
+import AuthBrandingPanel from "@/components/AuthBrandingPanel";
 import RideRequestForm from "@/components/RideRequestForm";
+
+const authComponents = {
+  Header: AuthBrandingPanel,
+};
 
 function getInitials(loginId: string | undefined): string {
   if (!loginId) return "?";
@@ -13,7 +17,7 @@ function getInitials(loginId: string | undefined): string {
 
 export default function Home() {
   return (
-    <Authenticator>
+    <Authenticator components={authComponents}>
       {({ signOut, user }) => {
         const loginId = user?.signInDetails?.loginId;
 
