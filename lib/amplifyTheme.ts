@@ -1,4 +1,3 @@
-// TODO: RE-ENABLE FOR PRODUCTION - active once the real <Authenticator> is restored in app/page.tsx
 // Maps the QuickShuttle brand palette (see app/globals.css) onto Amplify UI's
 // design tokens so the Cognito sign-in/sign-up screens match the rest of the app.
 import type { Theme } from "@aws-amplify/ui-react";

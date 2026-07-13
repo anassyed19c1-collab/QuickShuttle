@@ -13,3 +13,6 @@ yarn-error.log*
 next-env.d.ts
 .vercel
 "@ | Out-File -Encoding utf8 .gitignore
+
+lambda/*/node_modules
+lambda/*/*.zip
